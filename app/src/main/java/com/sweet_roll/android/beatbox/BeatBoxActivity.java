@@ -3,7 +3,7 @@ package com.sweet_roll.android.beatbox;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class BeatBox extends AppCompatActivity {
+public class BeatBoxActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
