@@ -13,9 +13,18 @@ import android.widget.Button;
  * Created by trand_000 on 5/15/2016.
  */
 public class BeatBoxFragment extends Fragment {
+
+    private BeatBox mBeatBox;
     public static BeatBoxFragment newInstance()
     {
         return new BeatBoxFragment();
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        mBeatBox = new BeatBox(getActivity());
     }
 
     //CALLED BY OS TO CREATE VIEW
