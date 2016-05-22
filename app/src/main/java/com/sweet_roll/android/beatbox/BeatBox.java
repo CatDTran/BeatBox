@@ -31,7 +31,7 @@ public class BeatBox {
             Log.i(TAG, "Found " + soundNames.length + " sounds");
         } catch(IOException ioe)
         {
-            Log.e(TAG, "Could not list assests", ioe);
+            Log.e(TAG, "Could not list assets", ioe);
             return;
         }
         for(String fileName : soundNames)

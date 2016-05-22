@@ -36,6 +36,7 @@ public class BeatBoxFragment extends Fragment {
     {
         View view = inflater.inflate(R.layout.fragment_beat_box, container, false);
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.fragment_beat_box_recycler_view);
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         recyclerView.setAdapter((new SoundAdapter(mBeatBox.getSounds())));
         return view;
     }
