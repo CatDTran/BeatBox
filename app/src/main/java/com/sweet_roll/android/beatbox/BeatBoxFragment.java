@@ -27,7 +27,11 @@ public class BeatBoxFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setRetainInstance(true);//this fragment will be retained and not destroyed with hosting activity on rotation
+        setRetainInstance(true);/*this fragment will be retained and not destroyed with hosting activity on rotation
+                                its view however is always destroyed and recreated
+                                with this set true, a fragment is not destroyed bu rather detach from hosting activity
+                                until a new fragment manager re-attach its to new hosting activity
+                                */
         mBeatBox = new BeatBox(getActivity());
     }
 
