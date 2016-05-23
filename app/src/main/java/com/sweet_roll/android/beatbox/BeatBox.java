@@ -30,6 +30,16 @@ public class BeatBox {
                                                                              //last parameter '0' specifies quality of sample rate converter and is ignored
         loadSounds();
     }
+
+    public void play(Sound sound){
+        Integer soundId = sound.getSoundId();
+        if(soundId ==null){
+            return;
+        }
+        mSoundPool.play(soundId, 1.0f, 1.0f, 1, 0, 1.0f);//sound id, volume left, volume right, priority (ignored in this case),loop or not, playback rate
+    }
+
+
     private void loadSounds()
     {
         String[] soundNames;
