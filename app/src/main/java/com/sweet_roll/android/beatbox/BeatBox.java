@@ -39,6 +39,9 @@ public class BeatBox {
         mSoundPool.play(soundId, 1.0f, 1.0f, 1, 0, 1.0f);//sound id, volume left, volume right, priority (ignored in this case),loop or not, playback rate
     }
 
+    public void release(){
+        mSoundPool.release();
+    }
 
     private void loadSounds()
     {
